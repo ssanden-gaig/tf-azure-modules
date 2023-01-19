@@ -1,4 +1,15 @@
 
+variable "location" {
+  type= string
+  description ="The Azure region"
+  default = "eastus2" 
+}
+
+variable "resource_group_name" {
+  type = string
+  description = "The Azure Resource Group"
+}
+
 variable "account_replication_type" {
   type        = string
   description = "The azure storage repliacation"
@@ -15,15 +26,12 @@ variable "account_tier" {
   description = "The azure storage account tier"
   default = "Standard"
 }
-
 variable "account_name" {
   type        = string
   description = "The azure storage account name"
-  nullable = false
 }
 
 variable "container_name" {
   type        = string
   description = "The container name"
-  nullable = false
 }
